@@ -77,6 +77,41 @@
                 padding: 15px 20px;
                 display: block; /* Garante que o link ocupe todo o espaço */
             }
+
+            /* Centraliza o conteúdo do Hero em telas menores */
+            .hero .container {
+                text-align: center;
+            }
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+            /* Garante que os botões não tenham margens laterais que quebrem o alinhamento */
+            .hero-actions .btn {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Centraliza conteúdo de outras seções em mobile */
+            .service-content,
+            .included-item,
+            .testimonial-card,
+            .footer-column {
+                text-align: center;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .testimonial-author {
+                /* Centraliza o bloco do autor dentro do card de depoimento */
+                justify-content: center;
+            }
         }
 
         /* --- SERVIÇOS (Página Principal) --- */
@@ -263,6 +298,7 @@
             <nav id="main-nav">
                 <ul>
                     <li><a href="#services">Serviços</a></li>
+                    <li><a href="#lives">Transmissões Ao Vivo</a></li>
                     <li><a href="#included">O que inclui</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
@@ -283,8 +319,10 @@
         <div class="container">
             <h1>Vídeos Profissionais que Impulsionam seu Negócio</h1>
             <p>Produção de vídeos de alta qualidade para empresas que querem se destacar no mercado</p>
-            <a href="#contact" class="btn">Solicitar orçamento</a>
-            <a href="#services" class="btn btn-secondary">Conhecer serviços</a>
+            <div class="hero-actions">
+                <a href="#contact" class="btn">Solicitar orçamento</a>
+                <a href="#services" class="btn btn-secondary">Conhecer serviços</a>
+            </div>
         </div>
     </section>
 
@@ -408,8 +446,8 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 1h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente: <br> R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 600,00</div>
@@ -423,8 +461,8 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 2h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente: <br> R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 800,00</div>
@@ -438,8 +476,8 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 1h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente: <br>R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 600,00</div>
@@ -453,8 +491,8 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 2h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente:  <br>R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 800,00</div>
@@ -468,9 +506,9 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 1h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-sync-alt"></i> Troca de ângulos durante a transmissão</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente:  <br>R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 1.200,00</div>
@@ -484,9 +522,9 @@
                         <li><i class="fas fa-video"></i> Transmissão em Full HD</li>
                         <li><i class="fas fa-clock"></i> Até 2h30min de duração</li>
                         <li><i class="fas fa-save"></i> Backup de gravação local</li>
-                        <li><i class="fas fa-headset"></i> Suporte técnico em tempo real</li>
                         <li><i class="fas fa-cogs"></i> Troca de ângulos</li>
                         <li><i class="fas fa-wifi"></i> Internet a cargo do cliente</li>
+                        <li><i class="fas fa-plus-circle"></i> Adicional por minuto excedente: <br> R$ 4,00</li>
                     </ul>
                     <a href="#contact" class="btn">Solicitar</a>
                     <div class="pricing-promo">Pacote promocional: R$ 1.500,00</div>
@@ -497,7 +535,7 @@
             <h3 class="subsection-title animate-on-scroll">Nossos Diferenciais em Transmissões</h3>
             <div class="features-grid animate-on-scroll">
                 <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-hd"></i></div>
+                    <div class="feature-icon"><i class="fas fa-desktop"></i></div>
                     <div>
                         <h3>Transmissão em Full HD</h3>
                         <p>Qualidade de imagem superior para uma experiência imersiva</p>
