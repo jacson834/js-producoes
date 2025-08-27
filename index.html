@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JS Produção de Vídeos Profissionais. Criamos vídeos de alta qualidade para empresas, incluindo vídeos institucionais e merchan em loja, para impulsionar seu negócio.">
+    <title>JS - Produção de Vídeos Profissionais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="img\js-logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustes para o cabeçalho ficar em linha única */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px; /* Espaço entre logo e menu */
+        }
+
+        /* Estilos para o logo e imagem */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            white-space: nowrap; /* Impede que o texto do logo quebre */
+        }
+        .logo-img {
+            height: 40px;
+        }
+
+        /* Garante que os itens do menu fiquem em linha */
+        #main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para o cabeçalho dos cards de serviço */
+        .service-card {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* As linhas abaixo mantêm o estilo original do card, como sombra e bordas arredondadas */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card-header {
+            background-color: #0056b3; /* O detalhe azul que você queria */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service-card-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .service-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Garante que todos os cards tenham a mesma altura */
+        }
+
+        .service-content .btn {
+            margin-top: auto; /* Alinha os botões na parte inferior dos cards */
+        }
+
+        /* Destaque para o card de Transmissões Ao Vivo */
+        .service-card-special {
+            background: #e7f0f7; /* Um fundo azul claro sutil */
+            border: 2px solid #0056b3;
+            transform: scale(1.02); /* Leve aumento para se destacar */
+        }
+
+        .service-card-special:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .service-card-special .service-card-header {
+            background-color: #004085; /* Um tom de azul mais escuro para o cabeçalho */
+        }
+
+        .service-card-special .service-content p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="img/js-logo.png" alt="Logo da JS Produção de Vídeos Profissionais" class="logo-img">
+                <div><span>Produção de Vídeos Profissionais</span></div>
+            </a>
+            <button class="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="JS-Lives.html" target="_blank">Transmissões Ao Vivo</a></li>
+                    <li><a href="#included">O que inclui</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="videos/sample.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Vídeos Profissionais que Impulsionam seu Negócio</h1>
+            <p>Produção de vídeos de alta qualidade para empresas que querem se destacar no mercado</p>
+            <a href="#contact" class="btn">Solicitar orçamento</a>
+            <a href="#services" class="btn btn-secondary">Conhecer serviços</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Nossos Serviços</h2>
+                <p>Escolha o tipo de vídeo ideal para sua empresa</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-header">
+                        <h3>Merchan em Loja</h3>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-price">R$ 450</p>
+                        <p>Duração: Até 1 minuto</p>
+                        <ul class="service-features">
+                            <li>Ideal para promoções e divulgações</li>
+                            <li>Destaque para produtos e serviços</li>
+                            <li>Alta conversão para o público local</li>
+                        </ul>
+                        <a href="#contact" class="btn">Solicitar agora</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-header">
+                        <h3>Merchan em Loja</h3>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-price">R$ 1.200</p>
+                        <p>Duração: Até 3 minutos</p>
+                        <ul class="service-features">
+                            <li>Apresentação mais detalhada</li>
+                            <li>Espaço para depoimentos</li>
+                            <li>Maior engajamento do público</li>
+                        </ul>
+                        <a href="#contact" class="btn">Solicitar agora</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-header">
+                        <h3>Vídeo Institucional</h3>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-price">R$ 2.500</p>
+                        <p>Duração: Até 5 minutos</p>
+                        <ul class="service-features">
+                            <li>Apresente sua empresa com profissionalismo</li>
+                            <li>Transmita confiança e credibilidade</li>
+                            <li>Ideal para site e redes sociais</li>
+                        </ul>
+                        <a href="#contact" class="btn">Solicitar agora</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-header">
+                        <h3>Vídeo Institucional</h3>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-price">R$ 4.000</p>
+                        <p>Duração: Até 10 minutos</p>
+                        <ul class="service-features">
+                            <li>Narrativa completa da sua empresa</li>
+                            <li>Espaço para depoimentos e cases</li>
+                            <li>Versatilidade de uso em diferentes plataformas</li>
+                        </ul>
+                        <a href="#contact" class="btn">Solicitar agora</a>
+                    </div>
+                </div>
+
+                <!-- Card de Destaque para Lives -->
+                <div class="service-card service-card-special animate-on-scroll">
+                    <div class="service-card-header">
+                        <h3>Transmissões Ao Vivo</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Leve seu evento para o mundo com transmissões profissionais no YouTube.</p>
+                        <ul class="service-features">
+                            <li>Cultos, Palestras e Eventos</li>
+                            <li>Casamentos e Cerimônias</li>
+                            <li>Qualidade e confiabilidade</li>
+                        </ul>
+                        <a href="JS-Lives.html" target="_blank" class="btn">Ver Planos de Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Included Section -->
+    <section class="included" id="included">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Todos os pacotes incluem</h2>
+                <p>Serviços de qualidade para garantir o melhor resultado</p>
+            </div>
+            <div class="included-grid">
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon" role="img" aria-label="Câmera de vídeo">🎥</div>
+                    <h3>Captação Local</h3>
+                    <p>1 câmera e operador (até 2h de filmagem)</p>
+                </div>
+                
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon" role="img" aria-label="Tesoura">✂️</div>
+                    <h3>Edição Completa</h3>
+                    <p>Cortes, correção de cor, trilha sonora, logotipo e legendas</p>
+                </div>
+                
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon" role="img" aria-label="Setas de atualização">🔄</div>
+                    <h3>1 Revisão Inclusa</h3>
+                    <p>Ajustes adicionais com valor adicional</p>
+                </div>
+                
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon" role="img" aria-label="Disquete">💾</div>
+                    <h3>Entrega Digital</h3>
+                    <p>Full HD ou 4K conforme sua necessidade</p>
+                </div>
+                
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon" role="img" aria-label="Cronômetro">⏱️</div>
+                    <h3>Prazo Rápido</h3>
+                    <p>Entrega em 5-10 dias úteis após gravação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Nosso Portfólio</h2>
+                <p>Confira alguns dos nossos trabalhos mais recentes</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Para alterar o vídeo, basta substituir o ID (ex: s999r3ebOiM) no link 'src' de cada iframe abaixo -->
+                <div class="video-wrapper animate-on-scroll">
+                    <iframe src="https://www.youtube.com/embed/PeC5Dj4vNtI" title="VII Festa da Familia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper animate-on-scroll">
+                    <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="Vídeo de Portfólio da JS Produções 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper animate-on-scroll">
+                    <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="Vídeo de Portfólio da JS Produções 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper animate-on-scroll">
+                    <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="Vídeo de Portfólio da JS Produções 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>O que nossos clientes dizem</h2>
+                <p>A satisfação de quem confia em nosso trabalho</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">“</div>
+                    <p class="testimonial-text">O trabalho da JS Produções foi fundamental para o lançamento do nosso novo produto. O vídeo institucional superou todas as nossas expectativas e gerou um retorno incrível.</p>
+                    <div class="testimonial-author">
+                        <picture>
+                            <source srcset="img/client-1.webp" type="image/webp">
+                            <source srcset="img/client-1.jpg" type="image/jpeg">
+                            <img src="img/client-1.jpg" alt="Foto de João Silva" width="60" height="60" loading="lazy">
+                        </picture>
+                        <div class="testimonial-author-info">
+                            <h4>João Silva</h4>
+                            <span>CEO, InovaTech</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">“</div>
+                    <p class="testimonial-text">Profissionalismo, criatividade e pontualidade. A equipe captou exatamente a essência da nossa marca e transformou em um vídeo emocionante. Recomendo fortemente!</p>
+                    <div class="testimonial-author">
+                        <picture>
+                            <source srcset="img/client-2.webp" type="image/webp">
+                            <source srcset="img/client-2.jpg" type="image/jpeg">
+                            <img src="img/client-2.jpg" alt="Foto de Maria Oliveira" width="60" height="60" loading="lazy">
+                        </picture>
+                        <div class="testimonial-author-info">
+                            <h4>Maria Oliveira</h4>
+                            <span>Diretora de Marketing, VesteBem</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">“</div>
+                    <p class="testimonial-text">Contratamos o serviço de merchan em loja e o resultado foi imediato. As vendas aumentaram e recebemos muitos elogios dos clientes. Excelente investimento!</p>
+                    <div class="testimonial-author">
+                        <picture>
+                            <source srcset="img/client-3.webp" type="image/webp">
+                            <source srcset="img/client-3.jpg" type="image/jpeg">
+                            <img src="img/client-3.jpg" alt="Foto de Carlos Pereira" width="60" height="60" loading="lazy">
+                        </picture>
+                        <div class="testimonial-author-info">
+                            <h4>Carlos Pereira</h4>
+                            <span>Gerente, Mercado Popular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre nossos serviços de produção de vídeo</p>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span>Qual é o prazo de entrega dos vídeos?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>O prazo padrão é de 5 a 10 dias úteis após a data da gravação. Prazos podem variar dependendo da complexidade do projeto, mas isso sempre será alinhado com você antes de iniciarmos.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span>Posso solicitar alterações no vídeo editado?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>Sim! Todos os nossos pacotes incluem uma rodada de revisão para garantir que o resultado final esteja perfeito. Alterações adicionais podem ser solicitadas e serão orçadas separadamente.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span>Vocês atendem fora da cidade?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>Com certeza! Atendemos projetos em toda a região. Custos de deslocamento e logística podem ser aplicados e serão detalhados na proposta comercial.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span>Como recebo o vídeo finalizado?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        <p>A entrega é feita de forma digital, através de um link para download em alta resolução (Full HD ou 4K, conforme o pacote contratado). Isso garante agilidade e segurança para você acessar seu material de qualquer lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>JS - Produção de Vídeos Profissionais</h3>
+                    <p>Produção de vídeos profissionais com qualidade e criatividade para impulsionar seu negócio.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <p>jacson834@gmail.com</p>
+                    <a href="https://wa.me/5569999311586" target="_blank" rel="noopener noreferrer">(69) 9 9931-1586</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/jstransmissoes" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@JSTransmissoes" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 JS - Produção de Vídeos Profissionais - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top-btn" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
