@@ -179,7 +179,7 @@ nav ul li a:hover {
 }
 
 /* Services Section */
-.services {
+.services, .lives {
     padding: 100px 0;
     background-color: var(--gray);
 }
@@ -207,6 +207,14 @@ nav ul li a:hover {
     background-color: var(--primary);
 }
 
+.subsection-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -218,20 +226,37 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-header {
+    background-color: var(--secondary);
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card-header h3 {
+    color: var(--light);
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .service-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.service-content h3 {
-    color: var(--secondary);
-    font-size: 1.5rem;
+.service-content .btn {
+    margin-top: auto;
 }
 
 .service-price {
@@ -244,6 +269,7 @@ nav ul li a:hover {
 .service-features {
     list-style: none;
     margin: 20px 0;
+    padding: 0;
 }
 
 .service-features li {
@@ -258,6 +284,109 @@ nav ul li a:hover {
     left: 0;
     color: var(--primary);
     font-weight: bold;
+}
+
+/* --- SEÇÃO DE LIVES (Conteúdo de JS-Lives.html) --- */
+/* Tipos de Serviço de Live */
+.lives-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.lives-service-item {
+    background: var(--light);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lives-service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.lives-service-item .service-icon {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+/* Preços de Live */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pricing-card {
+    background: var(--light);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.pricing-header h3 { 
+    font-size: 1.4rem; 
+    color: var(--dark); 
+}
+.pricing-price { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: var(--secondary); 
+    margin: 15px 0; 
+}
+.pricing-features { 
+    list-style: none; 
+    padding: 0; 
+    margin: 20px 0; 
+    flex-grow: 1; 
+}
+.pricing-features li { 
+    margin-bottom: 10px; 
+    color: #666; 
+}
+.pricing-features li i { 
+    color: #28a745; 
+    margin-right: 8px; 
+}
+.pricing-promo { 
+    margin-top: 15px; 
+    font-weight: 600; 
+    color: var(--primary); 
+}
+/* Diferenciais de Live */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+@media (min-width: 768px) {
+    .features-grid { grid-template-columns: 1fr 1fr; }
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.feature-icon { 
+    font-size: 2rem; 
+    color: var(--secondary); 
 }
 
 /* Included Section */

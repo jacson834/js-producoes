@@ -1,3 +1,4 @@
+// Para melhor organização, todo este script pode ser movido para um arquivo externo como 'scripts.js'
 document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu Toggle ---
     const mobileMenuButton = document.querySelector('.mobile-menu');
